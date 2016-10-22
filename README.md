@@ -1,19 +1,11 @@
-# Space Explorer Bot
-Space Explorer is simple Messenger chat bot that uses NASA's API to get the data and images about the space.  
+# Star Wars Bot
+Star Wars Bot is simple Messenger chat bot that uses [swapi's Star Wars API](https://swapi.co) to get the data about the Star Wars universe, built using the [Claudia Bot Builder](https://github.com/claudiajs/claudia-bot-builder), node.js library for creating chat bots for various platform and deploying them on AWS Lambda.  
 
-It's created for fun and also as a showcase for [Claudia Bot Builder](https://github.com/claudiajs/claudia-bot-builder), node.js library for creating chat bots for various platform and deploying them on AWS Lambda.
+## Contact the Republic's Central Knowledge System (Message the bot)
 
-## Watch the video
+[![Messenger code](assets/images/profile.png)](http://m.me/starwarsuniversebot)
 
-Short video is available on [Vimeo](https://vimeo.com/172001135).
-
-## Try it live
-
-Scan the code:
-
-[![Messenger code](assets/images/messenger_code.png)](https://m.me/space-explorer-bot)
-
-Or go to [m.me/space-explorer-bot](https://m.me/space-explorer-bot).
+Or go to [m.me/starwarsuniversebot](http://m.me/starwarsuniversebot).
 
 ## How to run and deploy it
 
@@ -48,9 +40,6 @@ Or go to [m.me/space-explorer-bot](https://m.me/space-explorer-bot).
    ```
 
    - `--configure-fb-bot` will prompt you for FB page access token and FB app secret (for message validation) and it'll print out your webhook URL;  
-   - `--configure-app` will prompt you for the Nasa API key (Check https://github.com/stojanovic/space-explorer-bot/blob/master/bot.js#L181);
-
-And that's it :)
 
 Full instructions for Claudia Bot Builder are available in [Getting started with Claudia Bot Builder](https://github.com/claudiajs/claudia-bot-builder/blob/master/docs/GETTING_STARTED.md) guide.
 
@@ -58,7 +47,7 @@ Full instructions for Claudia Bot Builder are available in [Getting started with
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Slobodan Stojanović
+Copyright (c) 2016 Lexie Heinle
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
