@@ -1,6 +1,8 @@
 # Star Wars Bot
 Star Wars Bot is simple Messenger chat bot that uses [swapi's Star Wars API](https://swapi.co) to get the data about the Star Wars universe, built using the [Claudia Bot Builder](https://github.com/claudiajs/claudia-bot-builder), node.js library for creating chat bots for various platform and deploying them on AWS Lambda.  
 
+Inspired by the [Space Explorer bot](https://github.com/stojanovic/space-explorer-bot).
+
 ## Contact the Republic's Central Knowledge System (Message the bot)
 
 [![Messenger code](assets/images/profile.png)](http://m.me/starwarsuniversebot)
