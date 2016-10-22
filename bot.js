@@ -148,7 +148,7 @@ const api = botBuilder((request, originalApiRequest) => {
     return [
       'This bot was heavily influenced by the Space Explorer Bot and built on the Claudia Bot Builder platform',
       'Icons used for the bot are from the Noun Project',
-      '- R2-D2 by icon 54, \n- Satellite icon by parkjisun, \n- Curiosity Rover icon by Oliviu Stoian, \n- Monster icon by Paulo Sá Ferreira',
+      '- Icons by icon 54',
       'This bot was created by Claudia Bot Builder team',
       new fbTemplate.button('More actions:')
         .addButton('Space Explorer Bot', 'https://github.com/stojanovic/space-explorer-bot')
