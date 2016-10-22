@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 
-'use strict'
+'use strict';
 
 const rp = require('minimal-request-promise');
 const botBuilder = require('claudia-bot-builder');
@@ -9,17 +9,17 @@ const fbTemplate = botBuilder.fbTemplate;
 function mainMenu() {
   return new fbTemplate.generic()
     .addBubble(`Available retrieval groups`, `Choose a group below to retrieve information.`)
-      .addImage('https://raw.githubusercontent.com/stojanovic/space-explorer-bot/master/assets/images/apod.png')
+      .addImage('https://raw.githubusercontent.com/lexieheinle/star-wars-bot/master/assets/images/background_species.png')
       .addButton('Person', 'SHOW_PERSON')
       .addButton('Planet', 'SHOW_PLANET')
       .addButton('Species', 'SHOW_SPECIES')
     .addBubble('Transportation options', 'View information about various forms of transportation')
-      .addImage('https://raw.githubusercontent.com/stojanovic/space-explorer-bot/master/assets/images/about.png')
+      .addImage('https://raw.githubusercontent.com/lexieheinle/star-wars-bot/master/assets/images/background_vehicles.png')
       .addButton('Vehicle', 'SHOW_VEHICLES')
       .addButton('Starships', 'SHOW_STARSHIPS')
       .addButton('Report an issue', 'https://github.com/lexieheinle/star-wars-bot/issues')
     .addBubble('More information', 'Learn about the data, code and the jedi behind this bot.')
-        .addImage('https://raw.githubusercontent.com/stojanovic/space-explorer-bot/master/assets/images/about.png')
+        .addImage('https://raw.githubusercontent.com/lexieheinle/star-wars-bot/master/assets/images/background_extras.png')
         .addButton('Data source', 'ABOUT_DATA')
         .addButton('Read the code', 'https://github.com/lexieheinle/star-wars-bot/')
         .addButton('Meet the jedi', 'SHOW_JEDI')
@@ -27,8 +27,8 @@ function mainMenu() {
 }
 
 const api = botBuilder((request, originalApiRequest) => {
-  console.log(JSON.stringify(request))
-  originalApiRequest.lambdaContext.callbackWaitsForEmptyEventLoop = false
+  console.log(JSON.stringify(request));
+  originalApiRequest.lambdaContext.callbackWaitsForEmptyEventLoop = false;
   function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -85,7 +85,7 @@ const api = botBuilder((request, originalApiRequest) => {
             return [
               `${species.name} ID: ${speciesNumber}`,
               `Classification: ${species.classification} Designation: ${species.designation}`,
-              `Average lifespan: ${species.average_lifespan} ` + ((species.homeworld) ? `Homeworld: ${species.homeworld}` : ''),
+              `Average lifespan: ${species.average_lifespan} Average height: ${species.average_height}`,
               new fbTemplate.button('Next actions:')
                 .addButton('More information', 'http://swapi.co/api/species/${speciesNumber}/')
                 .addButton('Back to start', 'MAIN_MENU')
@@ -148,7 +148,7 @@ const api = botBuilder((request, originalApiRequest) => {
     return [
       'This bot was heavily influenced by the Space Explorer Bot and built on the Claudia Bot Builder platform',
       'Icons used for the bot are from the Noun Project',
-      '- Rocket icon by misirlou, \n- Satellite icon by parkjisun, \n- Curiosity Rover icon by Oliviu Stoian, \n- Monster icon by Paulo Sá Ferreira',
+      '- R2-D2 by icon 54, \n- Satellite icon by parkjisun, \n- Curiosity Rover icon by Oliviu Stoian, \n- Monster icon by Paulo Sá Ferreira',
       'This bot was created by Claudia Bot Builder team',
       new fbTemplate.button('More actions:')
         .addButton('Space Explorer Bot', 'https://github.com/stojanovic/space-explorer-bot')
@@ -160,4 +160,4 @@ const api = botBuilder((request, originalApiRequest) => {
 
 /*api.addPostDeployConfig('nasaApiKey', 'NASA API Key:', 'configure-app');*/
 
-module.exports = api
+module.exports = api;
